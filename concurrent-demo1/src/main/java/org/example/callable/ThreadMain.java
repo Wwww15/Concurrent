@@ -18,9 +18,9 @@ public class ThreadMain
 
         thread.start();
 
-//        String result = futureTask.get();
-//
-//        System.out.println("结果是："+result);
+        String result = futureTask.get();
+
+        System.out.println("结果是："+result);
 
         System.out.println("线程运行结束！");
     }

@@ -13,16 +13,12 @@ public class ThreadPoolMain {
 
             @Override
             protected void afterExecute(Runnable r, Throwable t) {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                System.out.println("程序错误1："+r);
+                System.out.println("程序错误2："+t);
                 System.out.println("程序运行结束:" + Thread.currentThread().getName());
             }
         };
         Future<String> submit = poolExecutor.submit(callable);
-
         String result = submit.get();
         System.out.println(result);
     }

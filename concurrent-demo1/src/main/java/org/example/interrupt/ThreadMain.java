@@ -3,7 +3,7 @@ package org.example.interrupt;
 public class ThreadMain {
 
     public static void main(String[] args) throws InterruptedException {
-        MyThread2 myThread = new MyThread2();
+        MyThread myThread = new MyThread();
         myThread.start();
         Thread.sleep(10000);
         myThread.interrupt();
