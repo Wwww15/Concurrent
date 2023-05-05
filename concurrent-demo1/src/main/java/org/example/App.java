@@ -5,7 +5,7 @@ import org.example.implement.MyThreadThree;
 import org.example.implement.MyThreadTwo;
 import org.example.volatiletest.VolatileTest;
 
-import java.util.concurrent.ExecutionException;
+import java.util.concurrent.*;
 
 /**
  * Hello world!
@@ -52,8 +52,6 @@ public class App
         new Thread(new MyThreadThree(volatileTest,5)).start();
         new Thread(new MyThreadThree(volatileTest,6)).start();
         new Thread(new MyThreadThree(volatileTest,7)).start();
-
-
         new Thread(new MyThreadTwo(volatileTest)).start();
     }
 }
