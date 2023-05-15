@@ -3,7 +3,7 @@ package org.example.map;
 import java.util.HashMap;
 
 /**
- * map 研究案例
+ * hashmap 研究案例
  * 存放数据步骤：
  * 1.计算key的hash值
  * 2.判断当前数组是否需要扩容或者初始化
@@ -58,7 +58,7 @@ import java.util.HashMap;
  *
  *
  */
-public class MapMain {
+public class HashMapMain {
 
     public static void main(String[] args) {
         HashMap hashMap = new HashMap();
@@ -70,5 +70,9 @@ public class MapMain {
 
         Object o = hashMap.get(4);
         System.out.println(o);
+        Integer a = 16;
+        System.out.println(a.hashCode() & 16);
+        System.out.println(20 & 16);
+
     }
 }
