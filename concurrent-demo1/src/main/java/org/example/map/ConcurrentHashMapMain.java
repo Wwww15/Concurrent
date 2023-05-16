@@ -42,6 +42,9 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  *
  * 转化红黑树：
+ *
+ *
+ * 获取值过程：同 hashmap
  */
 public class ConcurrentHashMapMain {
 
