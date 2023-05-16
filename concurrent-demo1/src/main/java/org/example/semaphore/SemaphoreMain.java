@@ -1,7 +1,6 @@
 package org.example.semaphore;
 
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.LockSupport;
 
 /**
  * Semaphore 测试案例
