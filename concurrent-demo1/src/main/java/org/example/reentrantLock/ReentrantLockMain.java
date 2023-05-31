@@ -64,6 +64,7 @@ public class ReentrantLockMain {
             lock.lock();
             empty.signal();
             full.signal();
+            full.notify();
             lock.unlock();
         }).start();
     }
