@@ -1,5 +1,10 @@
 package org.example.threadpool;
 
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 /**
  * ThreadPoolExecutor 测试案例
  * ThreadPoolExecutor内部结构：
@@ -27,10 +32,30 @@ package org.example.threadpool;
 public class ThreadPoolExecutorMain {
 
     public static void main(String[] args) {
-
+        test1();
     }
 
-    private static void test() {
+    private static void test1() {
+        int processor = Runtime.getRuntime().availableProcessors();
+        //初始化
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(processor, processor * 2, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(100), new ThreadFactory() {
+            @Override
+            public Thread newThread(Runnable r) {
+                return null;
+            }
+        }, new ThreadPoolExecutor.AbortPolicy());
 
+        //提交任务
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+
+        //关闭线程池
+        executor.shutdown();
+        //立即关闭线程池
+        executor.shutdownNow();
     }
 }
