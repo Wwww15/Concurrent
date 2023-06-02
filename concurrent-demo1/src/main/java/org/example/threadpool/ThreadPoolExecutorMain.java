@@ -19,6 +19,10 @@ package org.example.threadpool;
  * 线程池状态：
  * RUNNING、SHUTDOWN、STOP、TIDYING、TERMINATED
  * 线程池的状态只能由小到大，不能由大到小
+ *
+ * 线程池缩小过程：
+ *  在getTask中，如果允许coreSize被释放或者当前线程数大于coreSize，则在超时poll任务之后，workCount-1，最后返回null;
+ *  线程在没有获取到任务后，调用processWorkExit方法，计算完成任务数，然后通过worker.remove移除线程
  */
 public class ThreadPoolExecutorMain {
 
