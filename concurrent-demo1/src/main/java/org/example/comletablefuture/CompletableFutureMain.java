@@ -2,10 +2,15 @@ package org.example.comletablefuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
-import java.util.concurrent.ExecutionException;
-import java.util.function.*;
-import java.util.stream.Stream;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
+/**
+ *
+ * CompletableFuture 测试案例
+ */
 public class CompletableFutureMain {
 
     public static void main(String[] args) {
@@ -70,7 +75,6 @@ public class CompletableFutureMain {
             public String get() {
                 try {
                     Thread.sleep(10000);
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
