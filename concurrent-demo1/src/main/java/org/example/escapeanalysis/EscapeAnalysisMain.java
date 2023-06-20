@@ -1,5 +1,8 @@
 package org.example.escapeanalysis;
 
+/**
+ * 逃逸分析测试案例
+ */
 public class EscapeAnalysisMain {
 
     public static void main(String[] args) {
