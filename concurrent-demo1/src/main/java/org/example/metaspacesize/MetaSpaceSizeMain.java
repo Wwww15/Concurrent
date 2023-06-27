@@ -3,6 +3,11 @@ package org.example.metaspacesize;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 
+/**
+ * 测试元空间案例
+ * -XX:MetaspaceSize
+ * -XX:MaxMetaspaceSize
+ */
 public class MetaSpaceSizeMain {
 
     public static void main(String[] args) {
